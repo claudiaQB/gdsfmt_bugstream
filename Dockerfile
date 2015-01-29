@@ -8,7 +8,7 @@ RUN apt-get install -y ssh libxml2-dev git
 RUN Rscript -e 'install.packages("devtools")'
 
 #gdsfmt from github
-RUN Rscript -e 'library(devtools);install_github("zhengxwen/gdsfmt")'
+RUN Rscript -e 'library(devtools);install_github("zhengxwen/gdsfmt", ref = "22d649dcf277c11bce42c4256307f52edb354bf0")'
 
 COPY bug_gdsfmt.R bug_gdsfmt.R
 
